@@ -1,0 +1,14 @@
+.list-group{
+  
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+}
+.list-group-item{
+    font-size: 12px;
+}
+span{
+    margin-left: 5px;
+    cursor: pointer;
+}
+

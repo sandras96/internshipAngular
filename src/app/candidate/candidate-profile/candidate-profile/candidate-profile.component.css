@@ -1,0 +1,28 @@
+
+.card{
+    border-radius: 0;
+}
+.card .card-header{
+    background-color: #fff;
+    font-size: 18px;
+    padding: 10px 16px;
+}
+.proviewcard .card-body{
+    padding: 0;
+}
+.cartproname{
+    font-size: 15px;
+    color: #212529;
+    line-height: 1;
+    display: inline;
+}
+
+.seller{
+    font-size:15px;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+
+
+

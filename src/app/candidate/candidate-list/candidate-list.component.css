@@ -1,0 +1,30 @@
+.card{
+    border-radius: 0;
+}
+.card .card-header{
+    background-color: #fff;
+    font-size: 18px;
+    padding: 10px 16px;
+}
+.proviewcard .card-body{
+    padding: 0;
+}
+.cardlist{
+    border-bottom: 1px solid #f0f0f0;
+}
+.cardlist:last-child{
+    border: 0;
+}
+.seller{
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1;
+}
+select{
+    height: 30px;
+    font-size: 13px;
+}
+#btn{
+    height: 30px;
+}

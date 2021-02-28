@@ -1,0 +1,51 @@
+
+  <div>
+      <h6>Skills <span class="badge badge-secondary badge-pill" (click)="openSm(content)" title="add more" >+</span> </h6>
+       <div>
+          <div *ngFor="let skill of candidate.skills" class="">
+              {{skill.name}}
+              <span class="col-1"(click)="removeSkill(skill)" class="badge badge-light badge-pill" title="remove skill">X</span>
+          </div>
+        </div>
+  </div>
+
+  <ng-template #content let-modal>
+      <div class="modal-header">
+        <h6 class="modal-title">Add more skills</h6>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+     
+    <div class="modal-body">
+      <div class="modal-body">
+        <ng-select [items]="allSkills"
+                    bindLabel="name"
+                    placeholder="Select skill"
+                    [multiple]="true"
+                    [(ngModel)]="selected">
+        </ng-select>
+      </div>
+
+      <form [formGroup]="skillForm" (ngSubmit)="onSubmit()">
+        <label>Add custom skill: </label>
+        <div class="input-group mb-3" style="width: 430px; margin-left: 20px;"> 
+          <input type="text"  id="name" name="name" formControlName="name" class="form-control" aria-label="skill name" aria-describedby="basic-addon2"
+                 [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="submit" title="add skill">Add</button>
+          </div>
+          <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+            <div *ngIf="f.name.errors.required">Name is required</div>
+          </div>
+        </div>
+      </form>
+
+    </div>
+       
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="getSelectedValue()">Finish</button>
+    </div>
+  </ng-template>
+
+    
